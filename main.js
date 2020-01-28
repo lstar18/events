@@ -97,36 +97,54 @@ const printToDom = (divId, textToPrint) => {
     selectedDiv.innerHTML = textToPrint;
     };
 
-const pieBuilder = () => {
+const pieBuilder = (monkeybuttArray) => {
     let domString = '';
-    for(let i= 0; i <pies.length; i++) {
+    for(let i= 0; i < monkeybuttArray.length; i++) {
         domString += '<div class="cards">';
-        domString += `<h2 class="name"> ${pies[i].name}</h2>`;
-        domString += `<p class="price"> <strong>Price</strong>:    $${pies[i].price}</p>`;
-        domString += `<img src="${pies[i].urlImage}" alt="A picture of a ${pies[i].name}" class="center">`;
-        domString += `<p class="crust"><strong>Type of Crust</strong>:     ${pies[i].crust}</p>`;
-        domString += `<p class="temp"> <strong>Served Warm</strong>:    ${pies[i].isWarm}</p>`;
-        domString += `<p class="org"> <strong>Organic</strong>:    ${pies[i].isOrganic}</p>`;
-        domString += `<p class="icecream"><strong>Ice Cream Pairing</strong>:     ${pies[i].iceCream}</p>`;
-        domString += `<p class="available"> <strong>Availability</strong>:    ${pies[i].isAvailable}</p>`;
-        domString += `<p class="drink"><strong>Best Paired With</strong>:     ${pies[i].drinkPairing}</p>`;
+        domString += `<h2 class="name"> ${monkeybuttArray[i].name}</h2>`;
+        domString += `<p class="price"> <strong>Price</strong>:    $${monkeybuttArray[i].price}</p>`;
+        domString += `<img src="${monkeybuttArray[i].urlImage}" alt="A picture of a ${monkeybuttArray[i].name}" class="center">`;
+        domString += `<p class="crust"><strong>Type of Crust</strong>:     ${monkeybuttArray[i].crust}</p>`;
+        domString += `<p class="temp"> <strong>Served Warm</strong>:    ${monkeybuttArray[i].isWarm}</p>`;
+        domString += `<p class="org"> <strong>Organic</strong>:    ${monkeybuttArray[i].isOrganic}</p>`;
+        domString += `<p class="icecream"><strong>Ice Cream Pairing</strong>:     ${monkeybuttArray[i].iceCream}</p>`;
+        domString += `<p class="available"> <strong>Availability</strong>:    ${monkeybuttArray[i].isAvailable}</p>`;
+        domString += `<p class="drink"><strong>Best Paired With</strong>:     ${monkeybuttArray[i].drinkPairing}</p>`;
 
-        switch (pies[i].instructor) {
+        switch (monkeybuttArray[i].instructor) {
             case "Zoe":  
-                domString += `<footer class="zoe"><strong>Recommdended by</strong>:    ${pies[i].instructor}</footer>`;
+                domString += `<footer class="zoe"><strong>Recommdended by</strong>:    ${monkeybuttArray[i].instructor}</footer>`;
             break;
             case "Luke":
-                domString += `<footer class="luke"><strong>Recommdended by</strong>:    ${pies[i].instructor}</footer>`;
+                domString += `<footer class="luke"><strong>Recommdended by</strong>:    ${monkeybuttArray[i].instructor}</footer>`;
             break;
             case "Mary": 
-                domString += `<footer class="mary"><strong>Recommdended by</strong>:     ${pies[i].instructor}</footer>`;
+                domString += `<footer class="mary"><strong>Recommdended by</strong>:     ${monkeybuttArray[i].instructor}</footer>`;
             break;
             case "Liza": 
-                domString += `<footer class="liza"><strong>Recommdended by</strong>:     ${pies[i].instructor}</footer>`;
+                domString += `<footer class="liza"><strong>Recommdended by</strong>:     ${monkeybuttArray[i].instructor}</footer>`;
             break;
         }
         domString += '</div>';
         printToDom('pie-cards', domString);
 };
 };
-pieBuilder();
+
+
+const findMyPies = (e) => {
+    const buttonId = e.target.id
+    const myPies = [];
+    for(let i= 0; i <pies.length; i++) {
+     if (pies[i].instructor === buttonId) {
+        myPies.push(pies[i]);
+    
+}
+    }
+    pieBuilder(myPies); 
+};
+
+pieBuilder(pies);
+document.getElementById('Zoe').addEventListener('click', findMyPies);
+document.getElementById('Mary').addEventListener('click', findMyPies);
+document.getElementById('Luke').addEventListener('click', findMyPies);
+document.getElementById('Liza').addEventListener('click', findMyPies);
