@@ -1,3 +1,147 @@
 body {
-    background-color: olive;
+    background-color: tan;  
+    font-family: 'Nunito', sans-serif;  
+
 }
+h1 {
+    display: flex;
+    justify-content: center;
+}
+.title {
+    display: flex;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.cards {
+    border: 1px gray solid;
+    box-shadow: 4px 3px 3px 0px rgb(243, 217, 145);
+    border-radius: 20px;
+    flex: 0 0 25%;
+    margin-top: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: maroon;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+}
+.price {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.temp {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.crust {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.org {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.icecream {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.available {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.drink {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.cards h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    border: 1px;
+    border-style: solid;
+    border-color: lightslategray;
+    border-radius: 20px;
+    background-color: gray;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+.center {
+    border: solid 1px gray;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35%;
+    width: 80%;
+  } 
+
+#pie-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.cards img {
+    height: 300px;
+    width: 400px;
+}
+.zoe {
+    background-color: brown;
+    border: burlywood 1px solid;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    font-family: 'Nunito', sans-serif;
+}
+.luke {
+    background-color: navy;
+    border: lightblue 1px solid;
+    border-radius: 20px;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    font-family: 'Nunito', sans-serif;
+}
+.mary {
+    background-color: darkgoldenrod;
+    border: rgb(228, 183, 71) 1px solid;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    font-family: 'Nunito', sans-serif;
+}
+.liza {
+    background-color: rgb(122, 6, 6);
+    border: rgb(177, 7, 7) 1px solid;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    font-family: 'Nunito', sans-serif;
+}
+
+
