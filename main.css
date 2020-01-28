@@ -13,7 +13,7 @@ h1 {
     font-family: 'Nunito', sans-serif;
 }
 
-.nav {
+.instructorbuttons {
     display: flex;
     justify-content: center;
     padding: 5px;
@@ -138,6 +138,16 @@ h1 {
     border: rgb(177, 7, 7) 1px solid;
     border-radius: 20px;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    font-family: 'Nunito', sans-serif;
+}
+.all {
+    background-color: white;
+    border: lightgray 1px solid;
+    border-radius: 20px;
+    color: black;
     display: flex;
     justify-content: center;
     align-self: flex-end;
